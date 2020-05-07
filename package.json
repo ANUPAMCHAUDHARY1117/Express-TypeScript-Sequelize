@@ -1,0 +1,37 @@
+{
+	"name": "express-typescript-sequelize",
+	"version": "0.0.9",
+	"description": "Express typescript mvc generator with sequelize orm",
+	"main": "dist/",
+	"scripts": {
+		"prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+		"build": "tsc",
+		"prestart": "npm run build",
+		"migrate": "node dist/migrations/migrate.js",
+		"seed": "node dist/seed/index.js",
+		"migrate:undo": "node dist/migrations/migrate-undo.js",
+		"start": "node dist/app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@hapi/boom": "^9.1.0",
+		"@types/bluebird": "^3.5.30",
+		"@types/express": "^4.17.6",
+		"@types/express-handlebars": "^3.1.0",
+		"@types/node": "^13.13.4",
+		"@types/validator": "^13.0.0",
+		"body-parser": "^1.19.0",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-handlebars": "^4.0.4",
+		"pg-promise": "^10.5.2",
+		"sequelize": "^5.21.7"
+	},
+	"devDependencies": {
+		"@types/dotenv": "^8.2.0",
+		"tslint": "^6.1.2",
+		"typescript": "^3.8.3"
+	}
+}

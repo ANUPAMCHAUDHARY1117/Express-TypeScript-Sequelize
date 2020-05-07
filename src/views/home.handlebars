@@ -1,0 +1,29 @@
+<h1>Express Typescript Generator</h1>
+<p>
+    Welcome to the home page of the express typescript application
+    {{todo}}
+    <table>
+        <thead>
+            <tr>
+                <th>Todo</th>
+                <th>User</th>
+                <th>Delete Todo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each todos}}
+            <tr>
+                <td> <span todoId={{todoId}} userId={{userId}}>{{name}}</span></td>
+                <td> <span todoId={{todoId}} userId={{userId}}>{{user}}</span></td>
+                <td><a class="waves-effect waves-teal btn-flat"><i class="material-icons" todoId={{todoId}}
+                            userId={{userId}}><span span todoId={{todoId}}
+                                userId={{userId}}onclick="deleteUser()">delete</span></i></a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</p>
+<script>
+    function deleteUser() {
+        console.log(" Hi")
+    } </script>
